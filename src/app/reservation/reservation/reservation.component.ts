@@ -27,7 +27,7 @@ export class ReservationComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    this.reservationsServices.getReservationByIdClient(3).subscribe(datosbyCliente =>{
+    this.reservationsServices.getReservationByIdClient(2).subscribe(datosbyCliente =>{
       this.datosbyCliente = datosbyCliente as any;
       //console.log("Datos cliente ", datosbyCliente);
     });
