@@ -1,0 +1,156 @@
+#parallax-image {
+    background-image: url(https://cdn.wallpapersafari.com/18/17/6iq7jS.jpg);
+    height: 45rem;
+    margin-bottom: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#parallax-image-galeria {
+    background-image: url(https://i.pinimg.com/originals/b5/80/66/b58066d9cb04ed80691d2658d73d1ae8.jpg);
+    height: auto;
+    margin-bottom: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#parallax-image-menu {
+    background-image: url(https://cdn.shopify.com/s/files/1/2656/8500/products/a-s-creation-wallpapers-food-drink-menu-chalkboard-wallpaper-2352949461035_1024x.jpg?v=1522246522);
+    height: auto;
+    margin-bottom: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#parallax-image-contacto {
+    background-image: url(https://wallpaperaccess.com/full/3124570.jpg);
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#parallax-image-desarrolladores {
+    background-image: url(https://www.laboratorioweb.mx/images/blog/5.jpeg);
+    height: AUTO;
+    margin-bottom: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#text-center {
+    font-family: 'Lobster', cursive;
+    ;
+}
+
+.caja {
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.caja1 {
+    border-right: grey solid;
+    width: 100%;
+    height: 100%;
+    padding-top: 3rem;
+    padding-left: 5rem;
+}
+
+.menu {
+    background-color: black;
+}
+
+.titulo {
+    font-family: 'Alef', sans-serif;
+    text-transform: uppercase;
+}
+
+.titulo2 {
+    font-family: 'Alef', sans-serif;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+
+.titulo3 {
+    font-family: 'Alef', sans-serif;
+    font-size: 1.2rem;
+}
+
+.separar {
+    margin-left: 5rem;
+    background-color: whitesmoke;
+}
+
+.slider {
+    width: 15rem;
+    height: 25rem;
+}
+
+.endi {
+    font-family: 'Alef', sans-serif;
+    text-transform: uppercase;
+}
+
+.carta {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 8px;
+}
+
+.topela {
+    display: inline-block;
+}
+
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+}
+
+.gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+}
+
+.gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+@media (max-width: 450px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn.filter {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+    }
+}

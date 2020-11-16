@@ -1,0 +1,102 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-title text-center mt-2">
+      <h2>Reservaciones.</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="reservationForm" (ngSubmit)="saveReservation(reservationForm)">
+        <!-- Algo: <input [class.is-invalid]="reservationForm.get('texto').touched && reservationForm.get('texto').invalid"
+          type="date" class="form-control" formControlName="texto"> -->
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Id: </label>
+            <input
+              [class.is-invalid]="reservationForm.get('idcliente').touched && reservationForm.get('idcliente').invalid"
+              type="text" class="form-control" placeholder="" formControlName="idcliente" value="2">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Nombres: </label>
+            <input [class.is-invalid]="reservationForm.get('nombres').touched && reservationForm.get('nombres').invalid"
+              type="text" class="form-control" placeholder="Nombres" formControlName="nombres">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Apellidos: </label>
+            <input
+              [class.is-invalid]="reservationForm.get('apellidos').touched && reservationForm.get('apellidos').invalid"
+              type="text" class="form-control" placeholder="Apellidos" formControlName="apellidos">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Telefono: </label>
+            <input
+              [class.is-invalid]="reservationForm.get('telefono').touched && reservationForm.get('telefono').invalid"
+              type="text" class="form-control" placeholder="Telefono" formControlName="telefono">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Email: </label>
+            <input [class.is-invalid]="reservationForm.get('correo').touched && reservationForm.get('correo').invalid"
+              type="email" class="form-control" placeholder="Correo electronico" formControlName="correo">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label>Cantidad de personas: </label>
+            <input
+              [class.is-invalid]="reservationForm.get('numeropersonas').touched && reservationForm.get('numeropersonas').invalid"
+              type="text" class="form-control" placeholder="Cantidad de personas" formControlName="numeropersonas">
+          </div>
+          <div class="form-group col-md-4">
+            <label>Fecha: </label>
+            <input [class.is-invalid]="reservationForm.get('fecha').touched && reservationForm.get('fecha').invalid"
+              type="date" class="form-control" placeholder="Fecha de reservación" formControlName="fecha">
+          </div>
+          <div class="form-group col-md-4">
+            <label>Hora: </label>
+            <input [class.is-invalid]="reservationForm.get('hora').touched && reservationForm.get('hora').invalid"
+              type="time" class="form-control" placeholder="hora de reserva" formControlName="hora">
+          </div>
+        </div>
+        <button class="btn btn-success" type="submit">Reservar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Inicio Tabla -->
+<ng-container *ngIf="key === null">
+  <div class="container mt-5">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Hora</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <ng-container *ngFor="let item of datosbyCliente">
+        <tbody>
+          <tr>
+            <th>{{ item.id }}</th>
+            <td>{{ item.fecha }}</td>
+            <td>{{ item.hora }}</td>
+            <td>{{ item.numeropersonas }}</td>
+            <td>
+              <button type="button" class="btn btn-warning mr-2">Edit</button>
+              <button type="button" (click)="deleteReservation(item.id)" class="btn btn-danger">Delete</button></td>
+          </tr>
+        </tbody>
+      </ng-container>
+    </table>
+  </div>
+</ng-container>
+<!-- Fin Tabla -->
